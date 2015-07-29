@@ -3,14 +3,13 @@
    font-weight: 600;
    line-height: 1em;
    margin: 0 0 $ratio--inv#{em};
-   text-transform: uppercase;
    -webkit-font-smoothing: antialiased;
 }
 
 h1{
     @extend %hn;
-
-    font-size: pow($ratio, 2)#{em};
+    font-weight: 100;
+    font-size: pow($ratio, 3)#{em};
 }
 
 h2{
@@ -24,4 +23,12 @@ h4{
     @extend %hn;
 
     font-size: 1 + ($ratio--inv / 2)#{em};
+}
+
+.hdr {
+    margin-top: 2 + $ratio#{em};
+}
+
+.title {
+    text-align: center;
 }
