@@ -6,3 +6,13 @@ var $ = global.window.$ = window.jQuery = require('../../../bower_components/jqu
 // ----------
 require('./components/testPlugin');
 $('body').logWidth();
+
+// Responsive navigation
+// ----------
+require('./components/navigation');
+$('.toggle-menu').navigation();
+
+// Secondary navigation
+// ----------
+require('./components/secondaryNavigation');
+$('.toggle--sub-menu').secondaryNavigation();

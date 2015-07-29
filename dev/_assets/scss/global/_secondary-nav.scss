@@ -1,0 +1,50 @@
+.secondary--nav-scrolled {
+    position: fixed;
+    top: 6.5em;
+    transition: all 0.3s;
+}
+
+.toggle--sub-menu {
+  display: block;
+  	@include breakpoint(small){
+        display: none;
+    }
+    @include breakpoint(medium){
+        display: none;
+    }
+    @include breakpoint(large){
+        display: none;
+    }
+}
+
+.secondary--nav__ul {
+  display: none;
+  	@include breakpoint(small){
+        display: block;
+        
+    }
+    @include breakpoint(medium){
+        display: block;
+    }
+    @include breakpoint(large){
+        display: block;
+    }
+}
+
+.secondary--nav {
+    background: #fff;
+    width: 100%;
+    padding: 0 $ratio#{em};
+  	@include breakpoint(small){
+      background: none;
+    }
+    @include breakpoint(medium){
+        display: block;
+      background: none;
+    }
+    @include breakpoint(large){
+        display: block;
+    }
+}
+
+.show-menu { display: block; }
