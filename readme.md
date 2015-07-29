@@ -1,6 +1,6 @@
 # William Hill
 
-Welcome to my pattern library for the william hill task.
+Welcome to my pattern library task
 
 ## To run locally to look over the working code follow these steps
 
