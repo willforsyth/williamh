@@ -1,0 +1,15 @@
+.main {
+	margin-top: 2 + $ratio#{em};
+}
+
+.content {
+	@include breakpoint(small){
+		column-count: 1;
+    }
+    @include breakpoint(medium){
+        column-count: 2;
+    }
+    @include breakpoint(large){
+        column-count: 3;
+    }
+}
