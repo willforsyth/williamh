@@ -1,11 +1,13 @@
 .toggle-menu {
-	display: block;
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  float: right;
-  margin: $ratio--inv#{em} $ratio--inv#{em} 0 0;
+    display: block;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    margin: $ratio--inv#{em} $ratio--inv#{em} 0 0;
+    transition: all 0.5s;
+    @extend .animated;
 
 	@include breakpoint(medium){
         display: none;
@@ -30,7 +32,8 @@
 }
 
 .main--nav__inner {
-  text-align: center;
+    text-align: center;
+    @extend .animated;
 }
 
 .main--nav__li:not(:last-of-type) {

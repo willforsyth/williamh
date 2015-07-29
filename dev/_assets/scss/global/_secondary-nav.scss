@@ -1,7 +1,13 @@
 .secondary--nav-scrolled {
+    top: 0em;
+    left: 0;
     position: fixed;
-    top: 6.5em;
-    transition: all 0.3s;
+
+    @include breakpoint(small){
+        top: 6.5em;
+        left: auto;
+        transition: all 0.3s;  
+    }
 }
 
 .toggle--sub-menu {

@@ -27,3 +27,7 @@ body{
 .hide{
     display: none;
 }
+
+body {
+    @extend .animated;
+}
