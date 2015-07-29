@@ -1,6 +1,4 @@
-# William Hill
-
-Welcome to my pattern library for the william hill task.
+# WilliamH
 
 ## To run locally to look over the working code follow these steps
 
@@ -14,8 +12,6 @@ Welcome to my pattern library for the william hill task.
 Run `grunt` or `grunt serve` on the command line and the project will build itself, set up a server, open the index page, and wait for you to make changes.
 
 ## What I have used
-
-wha
 
 * Grunt
 	* Autoprefixer
