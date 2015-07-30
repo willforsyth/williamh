@@ -1,12 +1,14 @@
 {
-    "name": "pattern-library-template",
-    "private": true,
-    "dependencies": {
-        "modernizr": "latest",
-        "jquery": "~1.11.0",
-        "requirejs": "~2.1.15",
-        "svg4everybody": "~1.0.0",
-        "js-md5": "~1.1.0"
-    },
-    "devDependencies": {}
+  "name": "pattern-library-template",
+  "private": true,
+  "dependencies": {
+    "modernizr": "latest",
+    "jquery": "~1.11.0",
+    "requirejs": "~2.1.15",
+    "svg4everybody": "~1.0.0",
+    "js-md5": "~1.1.0"
+  },
+  "devDependencies": {
+    "masonry": "~3.3.1"
+  }
 }
