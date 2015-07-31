@@ -15,19 +15,17 @@
         <script src="/../bower_components/modernizr/modernizr.js"></script>
     <!-- /build -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js">
-    </script>
-    <script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
 </head>
 <body>
     {% include toolbar.html %}
     <div class="pattern__wrapper">
         {{ content }}
     </div>
-    <script src="/scripts/common.js"></script>
-    <script src="/scripts/pattern.js"></script>
-    <!-- build:js /scripts/vendor/svg4everybody.js -->
-        <script src="/../bower_components/svg4everybody/svg4everybody.js"></script>
+    <!-- build:js /scripts/main.js -->
+        <script data-main="/scripts/main.js" src="/../bower_components/requirejs/require.js"></script>
+    <!-- /build -->
+    <!-- build:js /resources/scripts/vendor/svg4everybody.js -->
+        <script src="/../bower_components/svg4everybody/svg4everybody.min.js"></script>
     <!-- /build -->
 </body>
 </html>

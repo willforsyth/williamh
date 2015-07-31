@@ -7,6 +7,8 @@
     float: right;
     margin: $ratio--inv#{em} $ratio--inv#{em} 0 0;
     transition: all 0.5s;
+    background-color: $color__blue--light;
+    border-radius: 5px;
     @extend .animated;
 
 	@include breakpoint(medium){
@@ -69,7 +71,7 @@
 
 .main--nav__inner {
 	  position: fixed;
-    background: $color__gray;
+    background: $color__blue--light;
 		right: -100%;
 		z-index: 0;
 		top: 0;
@@ -79,7 +81,7 @@
 
 	@include breakpoint(small){
 	  position: fixed;
-		z-index: 0;
+		z-index: 10;
     right: -100%;
 		top: 0;
 		height: 100%;
@@ -98,5 +100,13 @@
       position: relative;
     }
 
+}
+
+.small--nav {
+  margin-top: $ratio#{em};
+  li {
+    display: inline-block;
+    padding-right: $ratio--inv#{em};
+  }
 }
 

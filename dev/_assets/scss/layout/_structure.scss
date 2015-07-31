@@ -9,6 +9,10 @@
     }
 }
 
+.section--feature {
+    margin: 2 + $ratio#{em} 0;
+}
+
 .content {
 	@include breakpoint(small){
 		column-count: 1;
