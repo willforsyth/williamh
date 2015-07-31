@@ -26,9 +26,5 @@ h4{
 }
 
 .hdr {
-    margin-top: 2 + $ratio#{em};
-}
-
-.title {
-    text-align: center;
+    padding-top: 2 + $ratio#{em};
 }

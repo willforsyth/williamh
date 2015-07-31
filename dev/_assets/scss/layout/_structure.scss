@@ -2,6 +2,13 @@
 	margin-top: 2 + $ratio#{em};
 }
 
+.center {
+    text-align: center;
+    p {
+        margin: auto;
+    }
+}
+
 .content {
 	@include breakpoint(small){
 		column-count: 1;
