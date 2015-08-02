@@ -48,4 +48,8 @@ require(['jquery', 'jquery-easing', 'vgrid'], function($){
 		delay: 20,
 		wait: 500
 	});
+	// layout vgrid again after all images have loaded
+    $(window).load(function(){
+        $("#grid-content").vgrid();
+    });
 });

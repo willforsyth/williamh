@@ -4,9 +4,9 @@ module.exports = {
             baseUrl: 'dev/_assets/scripts',
             paths: {
                 requireLib: '../../../bower_components/requirejs/require',
-                jquery: '../../../bower_components/jquery/dist/jquery',
-                vgrid: 'http://blog.xlune.com/2009/09/vgrid/js/jquery.vgrid.min',
-                'jquery-easing': 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min'
+                jquery: '../../../bower_components/jquery/dist/jquery.min',
+                vgrid: 'vgrid-plugin',
+                'jquery-easing': '../../../bower_components/jquery-easing/jquery.easing.min'
             },
             name: 'main',
             out: 'web/scripts/main.js',
