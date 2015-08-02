@@ -29,15 +29,6 @@ require(['tree-menu'], function(){
 	}
 });
 
-
-// Masonary grid test
-// -------------
-// require('../../../bower_components/masonry/dist/masonry.pkgd.min.js');
-// $('.grid--masonry').masonry({
-//   itemSelector: '.grid-item',
-//   columnWidth: 200
-// });
-
 // vgrid
 // -------------------
 

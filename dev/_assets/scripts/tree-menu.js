@@ -1,5 +1,4 @@
 var JSON = {
-
        "menu":[
           {
              "id":"contact",
@@ -101,11 +100,15 @@ var JSON = {
 function buildList(data, isMenu){
     var html = (isMenu)?'<div>':''; // Wrap with div if true
     html += '<ul>';
+    // var mydata = JSON.parse(data);
+    // alert(mydata[0].id);
+    // alert(mydata[0].menu);
     for(item in data){
         html += '<li>';
-        if(typeof(data[item].menu) === 'object'){ // An array will return 'object'
+        if(typeof(data[item].menu) === 'object'){ 
           
-          
+            // loop over json and find if it has menu
+
             if(isMenu){
                 html += '<a class="' + data[item].content + '" href="' + data[item].content + '">' + data[item].description + '</a>';
             } else {
@@ -115,7 +118,7 @@ function buildList(data, isMenu){
             html += buildList(data[item].menu, true); 
           
         } else {
-            html += data[item].id // No submenu
+            html += data[item].id 
         }
         html += '</li>';
     }

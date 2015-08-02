@@ -8,23 +8,22 @@
 
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
 
-    <link rel="stylesheet" media="all" href="/css/screen.css">
-    <link rel="stylesheet" media="all" href="/css/patterns.css">
+    <link rel="stylesheet" media="all" href="css/screen.css">
+    <link rel="stylesheet" media="all" href="css/patterns.css">
 
-    <!-- build:js /scripts/vendor/modernizr.js -->
+    <!-- build:js scripts/vendor/modernizr.js -->
         <script src="/../bower_components/modernizr/modernizr.js"></script>
     <!-- /build -->
 
 </head>
 <body>
-    {% include toolbar.html %}
     <div class="pattern__wrapper">
         {{ content }}
     </div>
-    <!-- build:js /scripts/main.js -->
+    <!-- build:js scripts/main.js -->
         <script data-main="/scripts/main.js" src="/../bower_components/requirejs/require.js"></script>
     <!-- /build -->
-    <!-- build:js /resources/scripts/vendor/svg4everybody.js -->
+    <!-- build:js resources/scripts/vendor/svg4everybody.js -->
         <script src="/../bower_components/svg4everybody/svg4everybody.min.js"></script>
     <!-- /build -->
 </body>

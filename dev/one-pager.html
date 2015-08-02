@@ -3,12 +3,12 @@ layout: base
 title: Williamh
 ---
 
-<header class="hdr">
+<header class="hdr" role="banner">
 	<h1 class="title center"><a href="/" title="">Welcome.</a></h1>
 	{% include main-nav.html %}
 </header>
 
-<main class="main grid">
+<main class="main grid" role="main">
 	<div class="column column__center column__10-of-12">
 		<aside class="column column__12-of-12 column__3-of-12--small">
 		 	{% include secondary-nav.html %}
@@ -25,89 +25,11 @@ title: Williamh
 		 	</div>
 
 			<section class="section--feature">
-				<h2 class="title--medium">Vgrid example</h2>
-				<p>This is an example of the a image gallery grid using a plugin called vgrid. The images have random heights but Its not working as nicely as I would like will take some testing and refining if I had more time.</p>
-			 	<div id="grid-content">
-					<div>
-						<img src="/imgs/feature.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img1.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img1.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img2.jpg" alt="feature image">
-					</div>
-					<div class="large">
-						<img src="/imgs/img3.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img2.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img1.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img2.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img2.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img1.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img2.jpg" alt="feature image">
-					</div>
-					<div>
-						<img src="/imgs/img2.jpg" alt="feature image">
-					</div>
-				</div>
+				{% include gallery-vgrid.html %}
 			</section>
 
 			<section class="section--feature">
-				<h2 class="title--medium">CSS grid layout</h2>
-				<p>This uses the gird system and all images set to the same height. This is a better way in my opinion and allows a little mroe freedom. Client can be guided to use the correct sized images.</p>
-			 	<div class="grid">
-					<div class="grid-item column column__12-of-12 column__8-of-12--medium">
-						<img src="/imgs/feature.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img1-400.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img1-400.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img1-400.jpg" alt="feature image">
-					</div>
-						<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img2-400.jpg" alt="feature image">
-					</div>
-						<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img3-400.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__12-of-12 column__8-of-12--medium">
-						<img src="/imgs/feature.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img1-400.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img1-400.jpg" alt="feature image">
-					</div>
-						<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img2-400.jpg" alt="feature image">
-					</div>
-						<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img3-400.jpg" alt="feature image">
-					</div>
-					<div class="grid-item column column__6-of-12 column__4-of-12--medium">
-						<img src="/imgs/img2-400.jpg" alt="feature image">
-					</div>
-				</div>
+				{% include gallery-css.html %}
 			</section>
 		</div>
 	</div>
