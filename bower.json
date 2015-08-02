@@ -10,6 +10,7 @@
     "jquery-easing": "*"
   },
   "devDependencies": {
-    "masonry": "~3.3.1"
+    "masonry": "~3.3.1",
+    "jquery-easing": "*"
   }
 }

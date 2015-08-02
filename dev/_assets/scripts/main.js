@@ -4,9 +4,9 @@
 requirejs.config({
     baseUrl: '/scripts',
     paths: {
-        jquery: '../../bower_components/jquery/dist/jquery',
-        vgrid: 'http://blog.xlune.com/2009/09/vgrid/js/jquery.vgrid.min',
-        'jquery-easing': 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min'
+        jquery: '../../bower_components/jquery/dist/jquery.min',
+        vgrid: 'vgrid-plugin',
+        'jquery-easing': '../../bower_components/jquery-easing/jquery.easing.min'
     }
 });
 
@@ -21,6 +21,14 @@ require(['jquery', 'navigation'], function($){
 require(['jquery', 'secondaryNavigation'], function($){
 	$('.toggle--sub-menu').secondaryNavigation();
 });
+
+require(['tree-menu'], function(){
+	var html = buildList(JSON.menu, false);
+	if (document.getElementById('JSON')) {
+	    document.getElementById("JSON").innerHTML = html;
+	}
+});
+
 
 // Masonary grid test
 // -------------

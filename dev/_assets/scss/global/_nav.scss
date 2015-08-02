@@ -9,6 +9,7 @@
     transition: all 0.5s;
     background-color: $color__blue--light;
     border-radius: 5px;
+    cursor: pointer;
     @extend .animated;
 
 	@include breakpoint(medium){
@@ -31,6 +32,23 @@
 
 .menu-hide {
 	right: 0 !important;
+    .main--nav__li {
+        text-align: center;
+        display: block;
+        padding: $ratio#{em};
+        font-size: 1 + $ratio#{em};
+        border-bottom: 1px solid $color__blue--light;
+        &:not(:last-of-type) {
+          margin-right: 0;
+        }
+        @include breakpoint(small){
+            display: block;
+        }
+        @include breakpoint(medium){
+        }
+        @include breakpoint(large){
+        }
+    }
 }
 
 .main--nav__inner {
@@ -45,7 +63,6 @@
 .main--nav__li {
   text-align: center;
 	display: inline-block;
-  
 	@include breakpoint(small){
         display: block;
     }
@@ -71,7 +88,7 @@
 
 .main--nav__inner {
 	  position: fixed;
-    background: $color__blue--light;
+        background: rgba(255, 255, 255, 0.8);
 		right: -100%;
 		z-index: 0;
 		top: 0;
