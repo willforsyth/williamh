@@ -40,7 +40,8 @@ Run `grunt` or `grunt serve` on the command line and the project will build itse
 
 	* Load each pages JS seperatly with Browserify
 	* Improve on the vanilla js
-	* 
+	* Add grunt critical CSS to inject critical css into the head
+	* Implement Phantom css
 
 ## Support
 This supports IE9 and above and Evergreen browsers.
