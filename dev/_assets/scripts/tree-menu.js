@@ -1,3 +1,5 @@
+// ideally this should be pulled in from a seperate file
+
 var JSON = {
        "menu":[
           {
@@ -98,32 +100,43 @@ var JSON = {
 
 
 function buildList(data, isMenu){
-    var html = (isMenu)?'<div>':''; // Wrap with div if true
+    var html = (isMenu)?'<ul>':''; 
     html += '<ul>';
-    // var mydata = JSON.parse(data);
-    // alert(mydata[0].id);
-    // alert(mydata[0].menu);
+
     for(item in data){
         html += '<li>';
         if(typeof(data[item].menu) === 'object'){ 
           
-            // loop over json and find if it has menu
-
+          
+          // if menu is not null then create new ul 
+        
             if(isMenu){
-                html += '<a class="' + data[item].content + '" href="' + data[item].content + '">' + data[item].description + '</a>';
+                html += '<a id=" '+ data[item].id +'" class="' + data[item].cssClass + '" href="' + data[item].content + '">' + data[item].description + '</a>';
             } else {
-                html += data[item].id; 
+                html += data[item].description; 
             }
-          
+         
+          // if content is an empty string then its not a link so hide the children and show on click 
+          if ( data[item].content != null ){ 
+                       
+/*             var list = this.children[1];
+               list.style.display = "none";
+               itemDes.onclick=function(){
+               if (list.style.display == "none"){
+                        list.style.display = "block";
+                  }else{
+                     list.style.display = "none";
+                }*/
+
+            }
             html += buildList(data[item].menu, true); 
-          
-        } else {
-            html += data[item].id 
         }
         html += '</li>';
     }
     html += '</ul>';
-    html += (isMenu)?'</div>':'';
+    html += (isMenu)?'</ul>':'';
+    
     return html;
 }
+
 

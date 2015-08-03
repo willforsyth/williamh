@@ -22,6 +22,9 @@ require(['jquery', 'secondaryNavigation'], function($){
 	$('.toggle--sub-menu').secondaryNavigation();
 });
 
+
+// load the json script
+// -------------------
 require(['tree-menu'], function(){
 	var html = buildList(JSON.menu, false);
 	if (document.getElementById('JSON')) {
