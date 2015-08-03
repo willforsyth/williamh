@@ -9,7 +9,7 @@ title: Pattern Library
 <main role="main">
     <header class="pattern__header">
         <div class="wrapper">
-            <h1>Pattern Library</h1>
+            <a href="index.html" title="back to home"><h1>Pattern Library</h1></a>
             <a href="#pattern__menu" class="pattern__nav__open-menu">
                 <svg viewBox="0 0 100 100" class="icon icon__menu">
                     <use xlink:href="/imgs/sprite/icon-sprite.svg#icon__menu"></use>
@@ -27,17 +27,6 @@ title: Pattern Library
                                 <a href="#component__{{ component.title | slugify }}">{{ component.title }}</a>
                             </li>
                         {% assign lastGroup = component.group-id %}
-                    {% endfor %}
-                    {% for template in templates %}
-                        {% if template.group != lastGroup %}
-                            <li class="pattern__nav__group">
-                                <p>{{ template.group }}</p>
-                            </li>
-                        {% endif %}
-                            <li class="pattern__nav__component">
-                                <a href="{{template.url}}">{{ template.title }}</a>
-                            </li>
-                        {% assign lastGroup = template.group %}
                     {% endfor %}
                 </ul>
             </nav>
