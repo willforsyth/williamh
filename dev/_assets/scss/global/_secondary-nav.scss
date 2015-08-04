@@ -1,0 +1,65 @@
+.secondary--nav-scrolled {
+    top: 0em;
+    left: 0;
+    position: fixed;
+    background: rgba(255,255,255,0.8);
+    .secondary--nav {
+        padding: 0 $ratio#{em};
+    }
+    @include breakpoint(small){
+        top: em;
+        left: auto;
+        transition: all 0.3s;  
+    }
+}
+
+.toggle--sub-menu {
+  display: block;
+  	@include breakpoint(small){
+        display: none;
+    }
+    @include breakpoint(medium){
+        display: none;
+    }
+    @include breakpoint(large){
+        display: none;
+    }
+}
+
+.secondary--nav__ul {
+  display: none;
+  	@include breakpoint(small){
+        display: block;
+        
+    }
+    @include breakpoint(medium){
+        display: block;
+    }
+    @include breakpoint(large){
+        display: block;
+    }
+}
+
+.secondary--nav {
+    width: 100%;
+    padding: $ratio#{em};
+    z-index: 1000;
+    border-bottom: 1px solid $color__blue--light;
+    text-align: center;
+  	@include breakpoint(small){
+      background: none;
+      border: none;
+      text-align: left;
+    }
+    @include breakpoint(medium){
+        display: block;
+        border: none;
+        background: none;
+        padding: 0 $ratio#{em};
+    }
+    @include breakpoint(large){
+        display: block;
+    }
+}
+
+.show-menu { display: block; }

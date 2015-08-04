@@ -1,0 +1,129 @@
+.toggle-menu {
+    display: block;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    margin: $ratio--inv#{em} $ratio--inv#{em} 0 0;
+    transition: all 0.5s;
+    background-color: $color__blue--light;
+    border-radius: 5px;
+    cursor: pointer;
+    @extend .animated;
+
+	@include breakpoint(medium){
+        display: none;
+    }
+}
+
+.main--nav__close {
+	display: block;
+  position: absolute;
+  top: 0.6em;
+  right: 0.6em;
+  font-size: 50px;
+  cursor: pointer;
+
+	@include breakpoint(medium){
+        display: none;
+    }
+}
+
+.menu-hide {
+	right: 0 !important;
+    .main--nav__li {
+        text-align: center;
+        display: block;
+        padding: $ratio#{em};
+        font-size: 1 + $ratio#{em};
+        border-bottom: 1px solid $color__blue--light;
+        &:not(:last-of-type) {
+          margin-right: 0;
+        }
+        @include breakpoint(small){
+            display: block;
+        }
+        @include breakpoint(medium){
+        }
+        @include breakpoint(large){
+        }
+    }
+}
+
+.main--nav__inner {
+    text-align: center;
+    @extend .animated;
+}
+
+.main--nav__li:not(:last-of-type) {
+  margin-right: $ratio#{em}
+}
+
+.main--nav__li {
+  text-align: center;
+	display: inline-block;
+	@include breakpoint(small){
+        display: block;
+    }
+    @include breakpoint(medium){
+        display: inline-block;
+    }
+    @include breakpoint(large){
+        display: inline-block;
+    }
+}
+
+.main--nav__a {
+  color: $color__black;
+}
+
+.menu-open .main--nav__inner {
+    transition: all 0.3s;
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
+.main--nav__inner {
+	  position: fixed;
+        background: rgba(255, 255, 255, 0.8);
+		right: -100%;
+		z-index: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+	@include breakpoint(small){
+	  position: fixed;
+		z-index: 10;
+    right: -100%;
+		top: 0;
+		height: 100%;
+		overflow: hidden;
+    }
+    @include breakpoint(medium){
+    	background: $color__black;
+    	position: relative;
+    	width: 100%;
+      right: 0;
+      top: 0;
+      background: none;
+      z-index: 0;
+    }
+    @include breakpoint(large){
+      position: relative;
+    }
+
+}
+
+.small--nav {
+  margin-top: $ratio#{em};
+  li {
+    display: inline-block;
+    padding-right: $ratio--inv#{em};
+  }
+}
+

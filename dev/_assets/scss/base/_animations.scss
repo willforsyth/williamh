@@ -1,0 +1,121 @@
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+          animation-name: bounceInUp;
+}
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-in {
+  -webkit-animation-name: bounceInUp;
+      animation-name: bounceInUp;
+}
+
+
+@keyframes blinking{
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/**********
+* Fade In *
+**********/ 
+@-webkit-keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;
+        display:block;} 
+} 
+@keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;
+        display:block;} 
+}
+.fadeIn{
+    opacity:0;
+}
+.fadeIn { 
+    -webkit-animation-name: fadeIn; 
+    animation-name: fadeIn; 
+}
+
+/**********
+* Grow in *
+***********/
+
+@-webkit-keyframes growIn { 
+    0% { 
+        -webkit-transform: scale(0.2); 
+        opacity:0;
+    } 
+    50% { 
+        -webkit-transform: scale(1.2); 
+        
+    } 
+    100% { 
+        -webkit-transform: scale(1); 
+        opacity:1;
+    } 
+} 
+@keyframes growIn { 
+    0% { 
+        transform: scale(0.2); 
+        opacity:0;
+    } 
+    50% { 
+        transform: scale(1.2); 
+        
+    } 
+    100% { 
+        transform: scale(1); 
+        opacity:1;
+    } 
+} 
+.growIn { 
+        -webkit-animation-name: growIn; 
+    animation-name: growIn; 
+}
