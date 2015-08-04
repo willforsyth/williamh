@@ -2,9 +2,12 @@
     top: 0em;
     left: 0;
     position: fixed;
-
+    background: rgba(255,255,255,0.8);
+    .secondary--nav {
+        padding: 0 $ratio#{em};
+    }
     @include breakpoint(small){
-        top: 6.5em;
+        top: em;
         left: auto;
         transition: all 0.3s;  
     }
@@ -38,15 +41,21 @@
 }
 
 .secondary--nav {
-    background: #fff;
     width: 100%;
-    padding: 0 $ratio#{em};
+    padding: $ratio#{em};
+    z-index: 1000;
+    border-bottom: 1px solid $color__blue--light;
+    text-align: center;
   	@include breakpoint(small){
       background: none;
+      border: none;
+      text-align: left;
     }
     @include breakpoint(medium){
         display: block;
-      background: none;
+        border: none;
+        background: none;
+        padding: 0 $ratio#{em};
     }
     @include breakpoint(large){
         display: block;

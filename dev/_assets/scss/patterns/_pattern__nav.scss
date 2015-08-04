@@ -10,6 +10,7 @@
     h1{
         border-bottom: 1px solid;
         display: block;
+        font-size: 1 + $ratio#{em};
         padding-bottom: pow($ratio--inv, 3)#{em};
     }
 

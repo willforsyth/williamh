@@ -8,26 +8,13 @@ module.exports = {
     },
     scripts: {
         files: ['dev/_assets/scripts/{,*/}*.js'],
-        tasks: ['browserify:dev']
+        tasks: ['copy:scripts']
     },
     svg: {
         files: ['dev/_assets/svg/*.svg'],
         tasks: [
             'svgstore:dev',
-            'regenerate'
-        ]
-    },
-    images: {
-        files: ['dev/_assets/imgs/{,*/,*/*/}*.{jpg,jpeg,png,gif}'],
-        tasks: [
-            'sprite',
-            'copy:images'
-        ]
-    },
-    fonts: {
-        files: ['dev/_assets/fonts/{,*/,*/*/}*.{eot,svg,ttf,woff,woff2}'],
-        tasks: [
-            'copy:fonts'
+            'recompile'
         ]
     },
     jekyll: {
@@ -39,7 +26,7 @@ module.exports = {
             'dev/_components/*.{md,markdown,html}',
             'dev/_plugins/*.rb'
         ],
-        tasks: ['regenerate']
+        tasks: ['recompile']
     },
     configFiles: {
         files: ['gruntfile.js', 'grunt/*.{js,yaml}'],

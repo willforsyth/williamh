@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="initial-scale=1">
     <meta name="keywords" content="">
 
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
 
-    <link rel="stylesheet" media="all" href="/css/screen.css">
-    <link rel="stylesheet" media="all" href="/css/patterns.css">
+    <link rel="stylesheet" media="all" href="css/screen.css">
+    <link rel="stylesheet" media="all" href="css/patterns.css">
 
-    <!-- build:js /scripts/vendor/modernizr.js -->
+    <!-- build:js scripts/vendor/modernizr.js -->
         <script src="/../bower_components/modernizr/modernizr.js"></script>
     <!-- /build -->
+
 </head>
 <body>
-    {% include toolbar.html %}
     <div class="pattern__wrapper">
         {{ content }}
     </div>
-    <script src="/scripts/common.js"></script>
-    <script src="/scripts/pattern.js"></script>
-    <!-- build:js /scripts/vendor/svg4everybody.js -->
-        <script src="/../bower_components/svg4everybody/svg4everybody.js"></script>
+    <!-- build:js scripts/main.js -->
+        <script data-main="/scripts/main.js" src="/../bower_components/requirejs/require.js"></script>
+    <!-- /build -->
+    <!-- build:js resources/scripts/vendor/svg4everybody.js -->
+        <script src="/../bower_components/svg4everybody/svg4everybody.min.js"></script>
     <!-- /build -->
 </body>
 </html>
